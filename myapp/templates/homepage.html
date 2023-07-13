@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/homepage.css">
     <title>Document</title>
 </head>
 <body>
-    this is home page!!!
-    <img src="static/images/imageone.png" alt="">
+
+    <!-- <img src="../static/images/imageone.png" alt=""> -->
+    <div class="form">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            latitude = <input type="double" name="latitude" value="0"> <br>
+            longitude = <input type="double" name="longitude" value="0"> <br> 
+            <p>select the type of detailing</p>
+              <input type="radio" id="html" name="detail" value="weather">
+              <label for="html">current weather</label><br>
+              <input type="radio" id="css" name="detail" value="forecast">
+              <label for="css">3-hour Forecast 5 days</label><br>
+            <button class="submit_button" type="submit">submit</button>
+        </form>
+    </div>
 </body>
+<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places" type="text/javascript"></script> -->
+
 </html>
