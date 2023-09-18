@@ -63,7 +63,14 @@
     </div>
     <div
       class="navbar"
-      style="display: block; background-color: #818181; margin: 0px; padding: 0px; height: 45px"
+      style="
+        position: fixed;
+        background-color: #818181;
+        margin: 0px;
+        padding: 0px;
+        height: 45px;
+        width: 100%;
+      "
     >
       <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;</span>
       <span style="float: right; font-size: 30px">
@@ -73,13 +80,15 @@
 
     <script>
       function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("mySidenav").style.width = "20%";
+        document.getElementById("main").style.marginLeft = "20%";
+        document.getElementById("main").style.width = "60%";
       }
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
+        document.getElementById("main").style.width = "79%";
       }
     </script>
   </body>
