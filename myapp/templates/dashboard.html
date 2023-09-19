@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/dashboard.css" />
+  </head>
+  <body>
+    {% include 'sidebar.html' %}
+    <div class="space_for_nav" style="height: 45px"></div>
+    <div id="main">
+      <div class="notification">
+        <ul>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="table">
+          <h1>Case List</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Case ID</th>
+                <th>Case Name</th>
+                <th>Status</th>
+                <th class="actions">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid temporibus.
+  
+                </td>
+                <td>Closed</td>
+                <td class="actions">
+                  <button class="btn">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid temporibus.
+  
+                </td>
+                <td>Closed</td>
+                <td class="actions">
+                  <button class="btn">View</button>
+                </td>
+              </tr>
+              
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="profile">
+        <div class="first">
+          <img src="static/images/imageone.png" alt="there should be img here" />
+          <p>your name</p>
+        </div>
+      </div>
+    </div>
+    <!-- <img src="static/images/imageone.png" alt="">  -->
+    {% include 'chatbot.html' %}
+  </body>
+  <script>
+    function openChat() {
+      document.getElementById("chatbot").style.width = "250px";
+    }
+
+    function closeChat() {
+      document.getElementById("chatbot").style.width = "0";
+    }
+  </script>
+</html>
