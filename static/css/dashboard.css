@@ -1,3 +1,19 @@
+body::before {
+  content: ""; /* Add empty content to the pseudo-element */
+  background-image: url('../images/background_img.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9; /* Adjust the opacity as needed */
+  z-index: -1; /* Place the pseudo-element behind other content */
+}
+body{
+z-index: 1;
+background-color: black;
+}
+
 #main {
   transition: margin-left 0.5s;
   display: flex;
@@ -6,9 +22,10 @@
 .profile {
 float: right;
   width: 200px; /* Set a width for the div */
-  background-color: #f0f0f0; /* Background color */
   padding: 20px; /* Add some padding for content */
   height: 70%;
+  margin: 10px;
+  padding: 10px;
 }
 .profile .first{
   display: flex;
@@ -28,8 +45,11 @@ float: right;
 .notification{
  display: inline-block;
   width: 250px; /* Set a width for the div */
-  background-color: #b2b2b2; /* Background color */
+  background-color: #0c0c0c; /* Background color */
   height: 70%;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  color: rgb(223, 223, 223);
 }
 .notification li{
   list-style: none;
@@ -38,9 +58,10 @@ float: right;
 
 .content {
   max-width: 60%;
-  background-color: #fff;
+  background-color: rgba(226, 220, 220, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  color: rgb(0, 0, 0);
 }
 
 .content h1 {
@@ -60,23 +81,26 @@ th,td {
 }
 
 .content th {
-  background-color: #007bff;
+  background-color: #3e3e3e;
   color: #fff;
 }
 
 .content tr:hover {
-  background-color: #f5f5f5;
+  background-color: #868484;
 }
 
 .content .btn {
-  background-color: #007bff;
+  background-color: #000000;
   color: #fff;
   border: none;
   cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .content .btn:hover {
-  background-color: #0056b3;
+  /* background-color: #3e3e3e; */
+  color: rgb(242, 255, 0);
 }
 
 
