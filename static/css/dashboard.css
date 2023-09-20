@@ -21,11 +21,14 @@ background-color: black;
 }
 .profile {
 float: right;
-  width: 200px; /* Set a width for the div */
+  width: 250px; /* Set a width for the div */
   padding: 20px; /* Add some padding for content */
   height: 70%;
   margin: 10px;
   padding: 10px;
+  background-color: rgb(142, 142, 142);
+  font-size: 0.9rem;
+  border-radius: 10px;
 }
 .profile .first{
   display: flex;
@@ -36,20 +39,31 @@ float: right;
   width: 40%;
   margin-left: 10%;
   height: 50%;
+  opacity: 0.8;
 }
 .profile .first p{
   display: inline-block;
   width: 30%;
   margin-left: 10%;
+  color: rgb(0, 0, 0);
+}
+.profile .second{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.profile .second p{
+  padding-top: 5px;
 }
 .notification{
  display: inline-block;
   width: 250px; /* Set a width for the div */
-  background-color: #0c0c0c; /* Background color */
+  background-color:rgb(200, 200, 200);
   height: 70%;
   margin: 10px 10px 10px 10px;
   padding: 10px;
-  color: rgb(223, 223, 223);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
 }
 .notification li{
   list-style: none;
@@ -62,6 +76,7 @@ float: right;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   color: rgb(0, 0, 0);
+border-radius: 10px 10px 0px 0px;
 }
 
 .content h1 {
@@ -72,12 +87,13 @@ float: right;
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+
 }
 
 th,td {
   padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
   text-align: center;
+  border-bottom: 1px solid white;
 }
 
 .content th {

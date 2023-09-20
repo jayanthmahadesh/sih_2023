@@ -5,10 +5,7 @@
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
 }
-body{
 
-/* background-color: red; */
-}
 .chatbot-toggler{
     position: fixed;
     bottom: 30px;
@@ -22,12 +19,12 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgb(178, 83, 255);
+    background: rgb(158, 158, 158);
     transition: all 0.2s ease;
 }
 
   .chatbot-toggler span {
-    color: #fff;
+    color: rgb(0, 0, 0);
     position: absolute;
   }
   .chatbot-toggler span:last-child,
@@ -42,7 +39,8 @@ body{
   right: 35px;
   bottom: 90px;
   width: 420px;
-  background: #fff;
+  background: rgba(74, 48, 21, 0.6);
+
   border-radius: 15px;
   overflow: hidden;
   opacity: 0;
@@ -58,7 +56,7 @@ body.show-chatbot .chatbot {
     transform: scale(1);
   }
 .chatbot header{
-    background-color: rgb(178, 83, 255);
+    background-color: rgb(66, 66, 66);
     padding: 16px 0px;
     text-align: center;
     position: relative;
@@ -87,14 +85,14 @@ body.show-chatbot .chatbot {
 .chatbot .incoming span{
     height: 32px;
     width: 32px;
-    background-color: rgb(178, 83, 255);
 
     align-self: flex-end;
     text-align: center;
-    color: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
     line-height: 32px;
     border-radius: 4px;
     margin: 0px 7px 10px 0px;
+    
 }
 .chatbot .outgoing {
     justify-content: flex-end;
@@ -108,13 +106,16 @@ body.show-chatbot .chatbot {
   }
   .chatbox .outgoing p{
     border-radius: 10px 10px 0 10px;
-    background-color: rgb(178, 83, 255);
-    color: white;
+    background-color: rgb(213, 213, 213);
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .incoming p{
-    background-color: rgb(194, 194, 194);
+    /* background-color: rgb(194, 194, 194); */
+    background-color: rgb(39, 39, 39);
     border-radius: 10px 10px 10px 0px;
-    color: black;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 0px rgba(201, 200, 200, 0.8);
 }
 .chatbot .chat-input {
     display: flex;
