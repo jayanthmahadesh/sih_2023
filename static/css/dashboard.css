@@ -1,13 +1,13 @@
 body::before {
-  content: ""; /* Add empty content to the pseudo-element */
+  content: ""; 
   background-image: url('../images/background_img.jpeg'); 
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.9; /* Adjust the opacity as needed */
-  z-index: -1; /* Place the pseudo-element behind other content */
+  opacity: 0.9;
+  z-index: -1; 
 }
 body{
 z-index: 1;
@@ -15,7 +15,6 @@ background-color: black;
 }
 
 #main {
-  transition: margin-left 0.5s;
   display: flex;
   justify-content: space-between;
 }
