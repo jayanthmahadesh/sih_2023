@@ -1,8 +1,6 @@
 .slideshow-container {
-
-  align-items: center;
-  max-width: 70%; /* Update max-width to make it responsive */
-  height: 500px;
+  height: 50vh;
+  width: 60vw;
   position: relative;
   margin: auto;
   overflow: hidden;
