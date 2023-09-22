@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST" action="/case_file">
+      {% csrf_token %}
+      <label>Short Case Name : </label>
+      <input
+        type="text"
+        placeholder="Depp vs Heard"
+        id="short_case_name"
+        name="short_case_name"
+      /><br />
+      <label>Caes type : </label><br />
+
+      <label>criminal</label>
+      <input type="radio" id="criminal" name="type" value="criminal" />
+
+      <label for="civil">civil :</label>
+      <input type="radio" id="civil" name="type" value="civil" /><br />
+      <label>matter type:</label>
+      <select id="matter" name="matter">
+        <option value="bailable">bailable</option>
+        <option value="non_bailable">non bailable</option>
+        <option value="high_profile">high profile</option></select
+      ><br />
+      <label>Petitioner : </label>
+      <input type="text" placeholder="Depp" id="petitioner" name="petitioner" /><br />
+      <label>Respondent : </label>
+      <input type="text" placeholder="Amber" id="respondent" name="respondent" /><br />
+      <label>Court_of_origin : </label>
+      <input
+        type="text"
+        placeholder="high court karnataka"
+        id="court_of_origin"
+        name="court_of_origin"
+      /><br />
+
+      <form id="voiceForm">
+        <label for="spokenText">Speak:</label>
+        <input type="text" id="spokenText" placeholder="Speak into the microphone" />
+        <button type="button" id="startButton" onclick="startListening()">Start Recording</button>
+        <button type="button" id="stopButton" onclick="stopListening()" disabled>
+          Stop Recording
+        </button>
+      </form>
+
+      <label>Case_description : </label>
+      <textarea name="case_description" id="case_description" cols="15" rows="4"></textarea><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <script src="static/js/case_file.js"></script>
+</html>
