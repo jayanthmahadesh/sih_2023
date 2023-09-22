@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<html lang="hi">
-  <!-- Set the lang attribute to specify Hindi as the language -->
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <!-- Use UTF-8 encoding to support Hindi characters -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hindi Input Example</title>
   </head>
+  <style>
+    /* styles.css */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+  </style>
   <body>
-    <label for="hindiInput">अपना नाम दर्ज करें (Enter Your Name):</label>
-    <input type="text" id="hindiInput" name="hindiInput" lang="hi" />
-    <!-- Use the lang attribute to specify Hindi as the input language -->
+    <button id="showPopup">Show Popup</button>
+    <div id="popupContainer" class="popup">
+      <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <p>This is a popup!</p>
+      </div>
+    </div>
+
+    <script>
+      // script.js
+      const showPopupButton = document.getElementById("showPopup");
+      const closePopupButton = document.getElementById("closePopup");
+      const popupContainer = document.getElementById("popupContainer");
+
+      showPopupButton.addEventListener("click", () => {
+        popupContainer.style.display = "block";
+      });
+
+      closePopupButton.addEventListener("click", () => {
+        popupContainer.style.display = "none";
+      });
+    </script>
   </body>
 </html>

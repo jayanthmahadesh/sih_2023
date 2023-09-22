@@ -34,30 +34,52 @@
             <tbody>
               <tr>
                 <td>2</td>
-                <td>Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid temporibus.
-  
+                <td>
+                  Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos
+                  non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid
+                  temporibus.
                 </td>
                 <td>Closed</td>
                 <td class="actions">
-                  <button class="btn">View</button>
+                  <button id="showPopup" class="btn">View</button>
                 </td>
+                <div id="overlay" class="overlay"></div>
+                <div id="popupContainer" class="popup">
+                  <div class="popup-content">
+                    <span class="close" id="closePopup">&times;</span>
+                    <div class="top">
+                      <h2>Case Details</h2>
+                    </div>
+                    <div class="mid">
+                      <div><strong>Case Number</strong> : 12434</div><br>
+                      <div><strong>Short Case Name</strong> : Depp vs Heard</div><br>
+                      <div><strong>Petitioner</strong> : John C. Depp</div><br>
+                      <div><strong>Respondent</strong> : Amber Laura Heard</div><br>
+                      <div><strong>Court of origin</strong> : U.S Court of Appeals for the Ninth Circuit</div><br>
+                      <div><strong>Decision</strong> : Granted</div><br>
+                      <div><strong>Case Details</strong> : In February 2019, Depp sued Heard over her December 2018 op-ed in The Washington Post. Depp claimed that Heard's allegations were part of an elaborate hoax against him and repeated his allegation that Heard had been the one who violently abused him.In August 2020, Heard countersued Depp, including the allegation that he had coordinated "a harassment campaign via Twitter and orchestrated online petitions in an effort to get her fired from Aquaman and L'Oréal".The trial was held at the Fairfax County Circuit Court. The location was chosen on the basis that the online edition and the print edition of The Washington Post' op-ed are published in the county.</div>
+                    </div>
+                    </p>
+                  </div>
+                </div>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid temporibus.
-  
+                <td>
+                  Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos
+                  non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid
+                  temporibus.
                 </td>
                 <td>Closed</td>
                 <td class="actions">
                   <button class="btn">View</button>
                 </td>
               </tr>
-              
+
               <!-- Add more rows as needed -->
             </tbody>
           </table>
         </div>
-
       </div>
       <div class="profile">
         <div class="first">
@@ -72,13 +94,6 @@
     <!-- <img src="static/images/imageone.png" alt="">  -->
     {% include 'chatbot.html' %}
   </body>
-  <script>
-    function openChat() {
-      document.getElementById("chatbot").style.width = "250px";
-    }
-
-    function closeChat() {
-      document.getElementById("chatbot").style.width = "0";
-    }
+  <script src="static/js/dashboard.js">
   </script>
 </html>
