@@ -69,6 +69,6 @@ async function translateText(text) {
     .catch((error) => {
       console.log(error);
     });
-  //   console.log(final_text);
+  console.log(final_text);
   document.getElementById("case_description").textContent = final_text;
 }
