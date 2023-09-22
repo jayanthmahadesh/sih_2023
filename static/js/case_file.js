@@ -1,4 +1,5 @@
 // Initialize the SpeechRecognition object
+const lang = localStorage.getItem("lang");
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 recognition.lang = "en-US"; // Set the recognition language to English
 
@@ -32,7 +33,7 @@ function stopListening() {
 async function translateText(text) {
   // You would typically use a translation API like Google Translate here.
   // For this example, we'll just display the same text.
-  var inputLanguage = "hi";
+  var inputLanguage = lang;
   var outputLanguage = "en";
   var translateScript = "";
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${inputLanguage}&tl=${outputLanguage}&dt=t&q=${encodeURI(
@@ -51,7 +52,7 @@ async function translateText(text) {
     });
 
   inputLanguage = "en";
-  outputLanguage = "hi";
+  outputLanguage = lang;
 
   var final_text = "";
   const url1 = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${inputLanguage}&tl=${outputLanguage}&dt=t&q=${encodeURI(
@@ -68,6 +69,6 @@ async function translateText(text) {
     .catch((error) => {
       console.log(error);
     });
-
+  //   console.log(final_text);
   document.getElementById("case_description").textContent = final_text;
 }
