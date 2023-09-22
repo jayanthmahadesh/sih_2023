@@ -33,7 +33,7 @@ function stopListening() {
 async function translateText(text) {
   // You would typically use a translation API like Google Translate here.
   // For this example, we'll just display the same text.
-  var inputLanguage = lang;
+  var inputLanguage = "da";
   var outputLanguage = "en";
   var translateScript = "";
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${inputLanguage}&tl=${outputLanguage}&dt=t&q=${encodeURI(
@@ -52,7 +52,8 @@ async function translateText(text) {
     });
 
   inputLanguage = "en";
-  outputLanguage = lang;
+  console.log("lang code is ", lang);
+  outputLanguage = "da";
 
   var final_text = "";
   const url1 = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${inputLanguage}&tl=${outputLanguage}&dt=t&q=${encodeURI(
