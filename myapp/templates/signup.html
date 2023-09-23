@@ -32,20 +32,32 @@
         <p>Please fill in this form to create a new account.</p>
         <hr />
         <label>First Name : </label>
-        <input type="text" placeholder="First name" id="first_name" name="first_name" /><br />
+        <input
+          type="text"
+          placeholder="First name"
+          id="first_name"
+          name="first_name"
+          required
+        /><br />
         <label>Last Name : </label>
-        <input type="text" placeholder="Last name" id="last_name" name="last_name" /><br />
+        <input type="text" placeholder="Last name" id="last_name" name="last_name" required /><br />
         <label>Gmail : </label>
-        <input type="text" placeholder="asdf@gmail.com" id="email" name="email" /><br />
+        <input type="text" placeholder="asdf@gmail.com" id="email" name="email" required /><br />
         <label>Aadhar number : </label>
-        <input type="text" placeholder="Aadhar number" id="aadhar" name="aadhar" /><br />
+        <input type="text" placeholder="Aadhar number" id="aadhar" name="aadhar" required /><br />
         <label>Gender : </label>
         <select name="gender">
           <option value="female">Female</option>
           <option value="male">Male</option></select
         ><br /><br />
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" /><br />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          name="password"
+          required
+        /><br />
         <div class="clearfix">
           <button type="submit" class="signupbtn">Sign Up</button>
           <button

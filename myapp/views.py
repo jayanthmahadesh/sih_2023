@@ -27,7 +27,7 @@ def send_otp_email(request):
         recipient_list = [user_email]
         print(user_email)
         send_mail(subject, message, from_email, recipient_list)
-        return render(request,'verify.html')
+        return render(request,'login.html')
 
 def login_with_2fa(request):
     if request.method == 'POST':
