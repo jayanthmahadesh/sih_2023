@@ -39,26 +39,26 @@
                 <td class="actions">
                   <button id="showPopup" class="btn">View</button>
                 </td>
-                <div id="overlay" class="overlay"></div>
-                <div id="popupContainer" class="popup">
-                  <div class="popup-content">
-                    <span class="close" id="closePopup">&times;</span>
-                    <div class="top">
-                      <h2>Case Details</h2>
-                    </div>
-                    <div class="mid">
-                      <div><strong>Case Number</strong> : {{case.Case_Id}}</div><br>
-                      <div><strong>Short Case Name</strong> : {{case.Short_Case_Name}}</div><br>
-                      <div><strong>Petitioner</strong> : {{case.Petitioner}}</div><br>
-                      <div><strong>Respondent</strong> : {{case.Respondent}}</div><br>
-                      <div><strong>Court of origin</strong> : {{case.Court_of_origin}}</div><br>
-                      <div><strong>Decision</strong> : pending</div><br>
-                      <div><strong>Case Details</strong> : {{case.Case_description}}</div>
-                    </div>
-                    </p>
-                  </div>
-                </div>
               </tr>
+              <div id="overlay" class="overlay"></div>
+              <div id="popupContainer" class="popup">
+                <div class="popup-content">
+                  <span class="close" id="closePopup">&times;</span>
+                  <div class="top">
+                    <h2>Case Details</h2>
+                  </div>
+                  <div class="mid">
+                    <div><strong>Case Number</strong> : {{case.Case_Id}}</div><br>
+                    <div><strong>Short Case Name</strong> : {{case.Short_Case_Name}}</div><br>
+                    <div><strong>Petitioner</strong> : {{case.Petitioner}}</div><br>
+                    <div><strong>Respondent</strong> : {{case.Respondent}}</div><br>
+                    <div><strong>Court of origin</strong> : {{case.Court_of_origin}}</div><br>
+                    <div><strong>Decision</strong> : pending</div><br>
+                    <div><strong>Case Details</strong> : {{case.Case_description}}</div>
+                  </div>
+                  </p>
+                </div>
+              </div>
 
               {% endfor %}
 
@@ -77,8 +77,35 @@
         </div>
       </div>
     </div>
+    <script>
+        window.onload = function() {
+          const showPopupButton = document.getElementById("showPopup");
+const closePopupButton = document.getElementById("closePopup");
+const popupContainer = document.getElementById("popupContainer");
+const overlay = document.getElementById("overlay");
+
+showPopupButton.addEventListener("click", () => {
+  popupContainer.style.display = "flex";
+  overlay.style.display = "block";
+  console.log("clicked");
+});
+
+closePopupButton.addEventListener("click", () => {
+  popupContainer.style.display = "none";
+  overlay.style.display = "none";
+});
+function openChat() {
+  document.getElementById("chatbot").style.width = "250px";
+}
+
+function closeChat() {
+  document.getElementById("chatbot").style.width = "0";
+}
+        };
+
+    </script>
     <!-- <img src="static/images/imageone.png" alt="">  -->
     {% include 'chatbot.html' %}
+    <!-- <script src="static/js/dashboard.js"></script> -->
   </body>
-  <script src="static/js/dashboard.js"></script>
 </html>

@@ -13,26 +13,21 @@ from django.contrib.auth.hashers import check_password
 
 
 
-# Create your views here.
 def send_otp_email(request):
-    # try:
-    if(request.method =='POST'):
+
+    if request.method == 'POST':
         otp_secret = pyotp.random_base32()
         request.session['otp_secret'] = otp_secret
         otp = pyotp.TOTP(otp_secret).now()
 
         subject = 'Your OTP for Two-Factor Authentication'
         message = f'Your OTP is: {otp}'
-        from_email = 'computeruse777@gmail.com'
+        from_email = 'prakharmsrit18@gmail.com'
         user_email = request.POST['email']
-        print("user name = ",user_email)
         recipient_list = [user_email]
-
+        print(user_email)
         send_mail(subject, message, from_email, recipient_list)
         return render(request,'verify.html')
-    # except Exception as e:
-    #     return render(request,'signup.html')
-
 
 def login_with_2fa(request):
     if request.method == 'POST':
@@ -325,7 +320,7 @@ class case_file(View):
             filed_case = CaseList(user_id=user_id,Short_Case_Name=short_case_name,Case_type=case_type,matter=matter,Petitioner=petitioner,Respondent=respondent,
             Court_of_origin=court_of_origin,Case_description=case_description,critical_score=critical_score)
             filed_case.save()
-            return render(request, 'dashboard.html')
+            return render(request, 'landing.html')
 
 
 

@@ -11,4 +11,5 @@ urlpatterns = [
     path('verify_otp',views.send_otp_email,name='verify'),
     path('login',login.as_view(),name='login'),
     path('logout',views.logout,name='logout'),
+    path('otp',views.send_otp_email,name='otp')
 ]

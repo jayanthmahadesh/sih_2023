@@ -5,6 +5,7 @@ const overlay = document.getElementById("overlay");
 showPopupButton.addEventListener("click", () => {
   popupContainer.style.display = "flex";
   overlay.style.display = "block";
+  console.log("clicked");
 });
 
 closePopupButton.addEventListener("click", () => {
