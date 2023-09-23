@@ -14,7 +14,13 @@ from django.contrib.auth.hashers import check_password
 
 
 def send_otp_email(request):
-
+    first_name = request.POST.get("first_name")
+    last_name = request.POST.get("last_name")
+    aadhar = request.POST.get("aadhar")
+    gender = request.POST.get("gender")
+    password = request.POST.get("password")
+    email = request.POST.get("email")
+    signed_user = CustomUser(first_name=first_name,last_name=last_name,aadhar_number=aadhar,password=password,gender=gender)
     if request.method == 'POST':
         otp_secret = pyotp.random_base32()
         request.session['otp_secret'] = otp_secret
@@ -27,6 +33,7 @@ def send_otp_email(request):
         recipient_list = [user_email]
         print(user_email)
         send_mail(subject, message, from_email, recipient_list)
+        signed_user.save()
         return render(request,'login.html')
 
 def login_with_2fa(request):

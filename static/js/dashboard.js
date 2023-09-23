@@ -2,6 +2,7 @@ const showPopupButton = document.getElementById("showPopup");
 const closePopupButton = document.getElementById("closePopup");
 const popupContainer = document.getElementById("popupContainer");
 const overlay = document.getElementById("overlay");
+
 showPopupButton.addEventListener("click", () => {
   popupContainer.style.display = "flex";
   overlay.style.display = "block";
