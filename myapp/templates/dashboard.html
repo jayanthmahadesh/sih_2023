@@ -14,9 +14,7 @@
       <div class="notification">
         <h3><strong>Notifications</strong></h3>
         <ul>
-          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
-          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
-          <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, aut.</li>
+          <li>Next hearing on 31/09/23 in high court karnataka: case id : 11</li>
         </ul>
       </div>
 
@@ -33,14 +31,11 @@
               </tr>
             </thead>
             <tbody>
+              {% for case in cases %}
               <tr>
-                <td>2</td>
-                <td>
-                  Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos
-                  non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid
-                  temporibus.
-                </td>
-                <td>Closed</td>
+                <td>{{case.Case_Id}}</td>
+                <td>{{case.Short_Case_Name}}</td>
+                <td>pending</td>
                 <td class="actions">
                   <button id="showPopup" class="btn">View</button>
                 </td>
@@ -52,30 +47,20 @@
                       <h2>Case Details</h2>
                     </div>
                     <div class="mid">
-                      <div><strong>Case Number</strong> : 12434</div><br>
-                      <div><strong>Short Case Name</strong> : Depp vs Heard</div><br>
-                      <div><strong>Petitioner</strong> : John C. Depp</div><br>
-                      <div><strong>Respondent</strong> : Amber Laura Heard</div><br>
-                      <div><strong>Court of origin</strong> : U.S Court of Appeals for the Ninth Circuit</div><br>
-                      <div><strong>Decision</strong> : Granted</div><br>
-                      <div><strong>Case Details</strong> : In February 2019, Depp sued Heard over her December 2018 op-ed in The Washington Post. Depp claimed that Heard's allegations were part of an elaborate hoax against him and repeated his allegation that Heard had been the one who violently abused him.In August 2020, Heard countersued Depp, including the allegation that he had coordinated "a harassment campaign via Twitter and orchestrated online petitions in an effort to get her fired from Aquaman and L'Oréal".The trial was held at the Fairfax County Circuit Court. The location was chosen on the basis that the online edition and the print edition of The Washington Post' op-ed are published in the county.</div>
+                      <div><strong>Case Number</strong> : {{case.Case_Id}}</div><br>
+                      <div><strong>Short Case Name</strong> : {{case.Short_Case_Name}}</div><br>
+                      <div><strong>Petitioner</strong> : {{case.Petitioner}}</div><br>
+                      <div><strong>Respondent</strong> : {{case.Respondent}}</div><br>
+                      <div><strong>Court of origin</strong> : {{case.Court_of_origin}}</div><br>
+                      <div><strong>Decision</strong> : pending</div><br>
+                      <div><strong>Case Details</strong> : {{case.Case_description}}</div>
                     </div>
                     </p>
                   </div>
                 </div>
               </tr>
-              <tr>
-                <td>2</td>
-                <td>
-                  Case 2lo Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos
-                  non maxime minus dolorum, voluptate incidunt voluptatibus veritatis aliquid
-                  temporibus.
-                </td>
-                <td>Closed</td>
-                <td class="actions">
-                  <button class="btn">View</button>
-                </td>
-              </tr>
+
+              {% endfor %}
 
               <!-- Add more rows as needed -->
             </tbody>
@@ -95,6 +80,5 @@
     <!-- <img src="static/images/imageone.png" alt="">  -->
     {% include 'chatbot.html' %}
   </body>
-  <script src="static/js/dashboard.js">
-  </script>
+  <script src="static/js/dashboard.js"></script>
 </html>

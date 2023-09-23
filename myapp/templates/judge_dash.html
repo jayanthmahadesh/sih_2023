@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+table, th, td {
+  border: 1px solid;
+padding: 5px;
+}
+table{
+    border-collapse: collapse;
+}
+#case_table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+
+}
+
+#case_table td, #case_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#case_table tr:nth-child(even){background-color: #f2f2f2;}
+
+#case_table tr:hover {background-color: #ddd;}
+
+#case_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+   {% include 'sidebar.html' %}
+    <div class="space_for_nav" style="height: 45px"></div>
+    <div class="space_for_nav" style="height: 45px"></div>
+  <div class="container" id="main">
+    <h1>predicted top cases List</h1>
+    <br><br>
+<table id="case_table">
+  <tr>
+    <th>Short_Case_Name</th>
+    <th>Case_type</th>
+    <th>matter</th>
+    <th>Petitioner</th>
+    <th>Respondent</th>
+    <th>Court_of_origin</th>
+    <th>critical value</th>
+  </tr>
+    {% for case in cases %}
+  <tr>
+  <td>{{case.Short_Case_Name}}</td>
+  <td>{{case.Case_type}}</td>
+  <td>{{case.matter}}</td>
+  <td>{{case.Petitioner}}</td>
+  <td>{{case.Respondent}}</td>
+  <td>{{case.Court_of_origin}}</td>
+  <td>{{case.critical_score}}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</body>
+</html>
+
+

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,12 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587  # Adjust this according to your SMTP server settings
+EMAIL_USE_TLS = True  # Use TLS, not SSL
+EMAIL_USE_SSL = False  
+EMAIL_HOST_USER = 'computeruse777@gmail.com'
+EMAIL_HOST_PASSWORD = 'uxkt ilnf ymqo chih'

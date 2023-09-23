@@ -66,9 +66,22 @@
     background-color: var(--primary-color);
   }
   
-.form{
+.container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
+  }
+.container form{
+
+  border: 2px solid black;
+  padding: 20px;
+}
+.container form *{
+  margin: 5px;
+  padding: 5px;
+}
+
+button :hover{
+  cursor: pointer;
 }

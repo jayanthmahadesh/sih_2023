@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password
 
-
 class CustomUser(models.Model):
     unique_id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=30)
@@ -9,7 +8,6 @@ class CustomUser(models.Model):
     aadhar_number = models.IntegerField(unique=True)
     password = models.CharField(max_length=128)  # Store the hashed password
     gender = models.CharField(max_length=10)
-
 
     def save(self, *args, **kwargs):
         # Hash the password before saving it to the database
@@ -29,6 +27,6 @@ class CaseList(models.Model):
     Court_of_origin = models.CharField(max_length=100)
     Decision : models.CharField(max_length=10,default="Pending")
     Case_description = models.CharField(max_length=1000)
-
+    critical_score = models.IntegerField()
     def __str__(self):
         return self.Short_Case_Name
